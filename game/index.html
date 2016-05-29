@@ -2,7 +2,31 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Kandi Runner</title>
+  <meta content='text/html; charset=utf-8' http-equiv='content-type' />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no,maximum-scale=1,minimum-scale=1">
+  <meta content='Bar Adventures' name='title' />
+  <meta content='Bar Adventures' name='og:title' />
+  <title>Bar Adventures</title>
+  <meta name="description" content="">
+
+  <link href="content/images/Bar Adventures.ico" rel="shortcut icon" type="image/x-icon">
+
+  <link rel="canonical" href="https://ColorBucket.github.io">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:title" content="Bar Adventures">
+  <meta property="og:description" content="Never lose that nice color again">
+  <meta property="og:url" content="https://ColorBucket.github.io">
+  <meta property="og:site_name" content="Bar Adventures">
+  <meta property="og:image" content="https://colorbucket.github.io/content/images/bucket.png">
+
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <link rel="shortcut icon" href="content/images/icon.png">
+  <link rel="apple-touch-icon" href="content/images/icon.png">
+  <link rel="apple-touch-startup-image" href="content/images/icon.png">
+
+
+  <link href='https://fonts.googleapis.com/css?family=Fira+Sans:400,500italic,300' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="kandi.css" type="text/css" media="screen">
   <script type="text/javascript" src="jquery.2.1.1.min.js"></script>
 </head>
@@ -15,36 +39,33 @@
         <progress id="progress-bar" value="0"></progress>
       </div>
       <div id="main">
-        <h1>Kandi Runner</h1>
+        <h1>Bar Adventures</h1>
         <ul>
-          <li><a href="javascript:void(0)" class="button play">Start Game</a></li>
-          <li><a href="javascript:void(0)" class="button credits">Credits</a></li>
+          <li><a href="javascript:void(0)" class="button play">Começar</a></li>
+          <li><a href="javascript:void(0)" class="button credits">Créditos</a></li>
         </ul>
       </div>
       <div id="credits">
         <ul>
-          <li class="artwork">Character design and art: <a href="http://www.acrylicana.com/">Mary Winkler</a></li>
-          <li class="artwork">Walk cycle animation: <a href="http://vimeo.com/hellostudios">Adam Everett Miller</a></li>
-          <li class="artwork">Platformer tiles: <a href="http://www.kenney.nl/">Kenney</a></li>
+          <li class="artwork">Memes: <a href="">Internet</a></li>
         </ul>
-        <ul>
-          <li class="music">Game music: <a href="http://opengameart.org/content/jump-and-run-8-bit">bart</a></li>
-          <li class="music">Jump sound effect: <a href="http://opengameart.org/content/platformer-jumping-sounds">dklon</a></li>
-          <li class="music">Game over music: <a href="http://opengameart.org/content/lose-music-3">remaxim</a></li>
-        </ul>
-        <ul>
-          <li class="developer">Developer: <a href="http://blog.sklambert.com/">Steven Lambert</a></li>
-        </ul>
-        <a href="javascript:void(0)" class="button back">Back</a>
+        <a href="javascript:void(0)" class="button back">Voltar</a>
       </div>
+    </div>
+    <div id="jump-overlay">
+      <p class="button" a>A</p>
+      <p class="button" b>B</p>
     </div>
     <canvas id="canvas" width="800" height="480">
       <p>You're browser does not support the required functionality to play this game.</p>
       <p>Please update to a modern browser such as <a href="www.google.com/chrome/‎">Google Chrome</a> to play.</p>
     </canvas>
     <div id="game-over">
-      <h2>You ran <span id="score"></span> meters!</h2>
-      <a href="javascript:void(0)" class="button restart">Try again?</a>
+      <h2>Você correu <span id="score"></span> metros!</h2>
+      <ul>
+        <li><a href="javascript:void(0)" class="button restart">De novo?</a></li>
+        <li><a href="javascript:void(0)" class="button menu">Menu</a></li>
+      </ul>
     </div>
   </div>
   <script type="text/javascript" src="kandi.js"></script>

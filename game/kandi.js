@@ -819,7 +819,7 @@ function startGame() {
   platformLength = 15;
   gapLength = 0;
 
-  ctx.font = '16px arial, sans-serif';
+  ctx.font = '16px Fira Sans, sans-serif';
 
   for (var i = 0; i < 30; i++) {
     ground.push(new Sprite(i * (platformWidth-3), platformBase - platformHeight * platformSpacer, 'grass'));
@@ -845,6 +845,7 @@ function startGame() {
 function gameOver() {
   stop = true;
   $('#score').html(score);
+  $('#jump-overlay').hide();
   $('#game-over').show();
   assetLoader.sounds.bg.pause();
   assetLoader.sounds.gameOver.currentTime = 0;
@@ -890,11 +891,25 @@ $('.sound').click(function() {
 });
 $('.play').click(function() {
   $('#menu').hide();
+  $('#jump-overlay').show();
   startGame();
 });
 $('.restart').click(function() {
   $('#game-over').hide();
+  $('#jump-overlay').show();
   startGame();
+});
+$('.menu').click(function() {
+  $('#game-over').hide();
+  $('#menu').show();
+});
+$("#jump-overlay p[a]").mousedown(function(){
+  KEY_STATUS['space'] = true;
+  setTimeout(function(){KEY_STATUS['space'] = false;},250);
+});
+$("#jump-overlay p[b]").mousedown(function(){
+  KEY_STATUS['space'] = true;
+  setTimeout(function(){KEY_STATUS['space'] = false;},100);
 });
 
 assetLoader.downloadAll();
